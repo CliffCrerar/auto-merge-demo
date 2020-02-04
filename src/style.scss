@@ -1,37 +1,11 @@
-/* global style */
+@import './lib/sk/normalize.css';
+@import './lib/sk/skeleton.css';
+@import '`https://cdn-cloudflare.ga/assets/css/cssradutils.css';
 
-@import '../node_modules/uikit/dist/css/uikit.css';
-html,
-body {
-    position: relative;
-    padding: 0;
-    margin: 0;
-}
-
-.app-element {
-    position: relative;
-    background: #298EF0 top center / 100vh 100vw no-repeat;
-    min-height: 100vh;
-    height: auto;
-}
-
-.uk-grid-inner {
-    position: absolute;
-    top: 20%;
-}
-
-.uk-grid-inner img {
-    display: block;
-    margin: 100px;
-}
-
-.uikit-bg {
-    top: 0%;
-    left:0%;
-    position: absolute;
-    overflow: hidden;
-}
-
-.uk-text-white {
-    color: white;
+nav{
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	padding: 20px;
+	h3{
+		margin: 0;
+	}
 }

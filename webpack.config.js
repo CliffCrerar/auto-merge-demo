@@ -5,13 +5,13 @@ const ManifestPlugin = require('webpack-manifest-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webpack = require('webpack');
 
-const favicon = './src/img/favicon.png'
+
 
 module.exports = {
     entry: './src/index.js',
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'public')
+        path: path.resolve(__dirname, 'dist')
     },
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
@@ -27,7 +27,7 @@ module.exports = {
             fileName: 'index.html',
             meta: require('./meta.json')
         }),
-        new FaviconsWebpackPlugin(favicon),
+        // new FaviconsWebpackPlugin(favicon),
         new ManifestPlugin(),
         new webpack.SourceMapDevToolPlugin({})
     ],
