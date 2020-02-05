@@ -1,5 +1,7 @@
 
 import './style.scss';
+import './utils';
+import dialog from './components/dialog';
 import { render, html } from 'lit-html';
 import { content, header, footer } from './components'
 import ops from './functions'
@@ -18,6 +20,7 @@ const main = html`
 	<footer class="container w-100 text-center">
 		${footer}
 	</footer>
+	<div id="dialog" class="dialog-container position-absolute"></div>
 `
 render(main, document.body)
 document.body.classList.add(
@@ -27,6 +30,9 @@ document.body.classList.add(
 
 const mh = document.querySelector('main').clientHeight
 const swContainer = document.getElementById('sw-container');
+const dialogContainer = byID('dialog');
 swContainer.style.height = `${mh}px`;
+
+render(dialog,dialogContainer);
 
 ops();

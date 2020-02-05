@@ -21,3 +21,14 @@ main{
 .app-element{
 
 }
+
+.dialog-container {
+	box-shadow: 7px 7px 5px 10px rgba(0, 0, 0, 0.2);
+	top: 30%;
+	left: 30%;
+	padding: 20px;
+	width: 20%;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 7px;
+	background: white;
+}
