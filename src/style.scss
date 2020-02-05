@@ -1,6 +1,10 @@
 @import './lib/sk/normalize.css';
 @import './lib/sk/skeleton.css';
-@import '`https://cdn-cloudflare.ga/assets/css/cssradutils.css';
+@import './lib/rad/rad-utils.css';
+
+body{
+	min-height: 100vh;
+}
 
 nav{
 	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -8,4 +12,12 @@ nav{
 	h3{
 		margin: 0;
 	}
+}
+
+main{ 
+	flex: 1;
+}
+
+.app-element{
+
 }
