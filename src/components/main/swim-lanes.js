@@ -2,7 +2,7 @@ import './_swimlanes.scss';
 import { html } from 'lit-html';
 
 function addBtnClick(ev) {
-	const 
+	const
 		swimLaneNo = ev.target.id.split('-')[ 1 ],
 		cardNo = ev.target.nextElementSibling.children.length,
 		cardId = `card-${ swimLaneNo }-${ cardNo }`,
@@ -10,23 +10,21 @@ function addBtnClick(ev) {
 		
 			<div 
 				class="card" 
-				id="${cardId}">
+				id="${cardId }">
 				<input 
-					name=${cardId} 
+					name=${cardId } 
 					focus
 					value="new card"/>
 				<small></small>
 			</div>
 			`
-console.log('card: ', card);
+	console.log('card: ', card);
 	console.log('ev.target.nextElementSibling: ', ev.target.nextElementSibling.children);
 	Promise.resolve(
-		(()=>ev.target.nextElementSibling.innerHTML += card.getHTML())()
+		(() => ev.target.nextElementSibling.innerHTML += card.getHTML())()
 	)
-	.then(()=>{
-	})
-	
-	
+		.then(() => {
+		})
 }
 
 const swimLanes = () => {
