@@ -1,15 +1,38 @@
 
 import './style.scss';
-import UIkit from 'uikit';
-import Icons from 'uikit/dist/js/uikit-icons';
-import litHtmlTemplate from './intro'
+import './utils';
+import dialog from './components/dialog';
 import { render, html } from 'lit-html';
-
-UIkit.use(Icons);
+import { content, header, footer } from './components'
+import ops from './functions'
+// UIkit.use(Icons);
 
 const main = html`
-	<main class="app-element">
-		${litHtmlTemplate}
-	</main>`
+	<nav>
+		<h3>Demo: Auto-Merge</h3>
+	</nav>
+	<header class="text-center m-5">
+		${header}
+	</header>
+	<main class="app-element container">
+		${content()}
+	</main>
+	<footer class="container w-100 text-center">
+		${footer}
+	</footer>
+	<div id="dialog" class="dialog-container position-absolute"></div>
+`
+render(main, document.body)
+document.body.classList.add(
+	'd-flex',
+	'flex-column',
+)
 
-render(main,document.body)
+const mh = document.querySelector('main').clientHeight
+const swContainer = document.getElementById('sw-container');
+const dialogContainer = byID('dialog');
+swContainer.style.height = `${mh}px`;
+
+render(dialog,dialogContainer);
+
+ops();
