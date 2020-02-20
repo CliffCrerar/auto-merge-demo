@@ -1,3 +1,7 @@
+/**
+ * Swim lanes
+ */
+
 import './_swimlanes.scss';
 import { html } from 'lit-html';
 

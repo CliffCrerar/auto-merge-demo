@@ -1,7 +1,9 @@
 /**
- * CARD NAME Dialog
+ * App dialog
  */
+
 // @ts-nocheck
+
 import { html } from 'lit-html';
 
 let val = ''
@@ -14,7 +16,7 @@ export default html`
 			left: 30%;
 		}
 	</style>
-	<div class="dialog text-center w-100">
+	<div class="dialog text-center w-100" style="display: none">
 		<label for="#cardnameinput">Enter Name for Card</label>	
 		<input 
 			type="text" 

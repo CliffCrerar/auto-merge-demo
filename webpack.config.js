@@ -4,10 +4,11 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webpack = require('webpack');
-
+require('dotenv').config();
 
 
 module.exports = {
+    mode: process.env.NODE_ENV,
     entry: './src/index.js',
     output: {
         filename: 'bundle.js',
@@ -22,11 +23,7 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin({
-            title: 'Uikit webpack',
-            fileName: 'index.html',
-            meta: require('./meta.json')
-        }),
+        new HtmlWebpackPlugin(require('./src/html')),
         // new FaviconsWebpackPlugin(favicon),
         new ManifestPlugin(),
         new webpack.SourceMapDevToolPlugin({})
