@@ -1,19 +1,9 @@
 /**
  * Component index
  */
-import { render, html } from 'lit-html';
-import header from './_header'
-import swimLanes from './swimlanes/_swim-lanes';
-import footer from './footer';
+import app from './app';
+export default app;
 
-const sw = swimLanes();
+import SwimLanes from './swim-lanes';
 
-const content = () => html`
-	<div
-		id="sw-container"
-		class="d-flex border-right"
-		style="flex: 1;" >
-		${sw }
-	</div>
-`
-export { content, header, footer }
+export {SwimLanes}

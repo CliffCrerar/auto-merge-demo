@@ -6,9 +6,9 @@ import { html } from "lit-html";
 
 export default (content) => {
 	console.log('content: ', content);
-	
+	const {brand} = content;
 	return html`
-	<nav>
-		<h3>Demo: Auto-Merge</h3>
-	</nav>
+		<nav>
+			<h3>${brand}</h3>
+		</nav>
 `}

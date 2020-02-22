@@ -2,7 +2,7 @@
  * Swim lanes
  */
 
-import './_swimlanes.scss';
+import './_swim-lanes.scss';
 import { html } from 'lit-html';
 
 function addBtnClick(ev) {
@@ -31,7 +31,7 @@ function addBtnClick(ev) {
 		})
 }
 
-const swimLanes = () => {
+const SwimLanes = () => {
 	const lanes = [
 		'sw-1', 'sw-2', 'sw-3', 'sw-4',
 	]
@@ -56,4 +56,4 @@ const swimLanes = () => {
 
 
 
-export default swimLanes;
+export default SwimLanes;

@@ -1,17 +1,16 @@
 /*
  * Main Application
  */
+import nav from './_nav';
+import header from './_header';
+import main from './_main';
+import footer from './_footer';
 import { html } from 'lit-html';
 
-const app = (content)= html`
-
-	
-	<main class="app-element container">
-		${content() }
-	</main>
-	<footer class="container w-100 text-center">
-		${footer }
-	</footer>
-	<!-- <div id="dialog" class="dialog-container position-absolute"></div> -->
+const app = (content) => html`
+	${nav(content.nav) }
+	${header(content.header) }
+	${main(content.main) }
+	${footer(content.footer) }	
 `
-export {main};
+export default app;

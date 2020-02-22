@@ -16,5 +16,6 @@
 	"layoutmode": "fitscreen",
 	"full-screen": "yes",
 	"screen-orientation": "landscape/portrait",
-	"generator":"webpack"
+	"generator":"webpack",
+	"viewport":"width=device-width, initial-scale=1, shrink-to-fit=no"
 }

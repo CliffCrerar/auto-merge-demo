@@ -1,4 +1,4 @@
-export default (mode) => ({
+module.exports = (mode) => ({
 	base: {
 		href: '/', target: '_blank',
 	},

@@ -1,13 +1,14 @@
 /**
- * Main
+ * Footer
  */
 
 import { html } from "lit-html";
 
 export default (content) => {
 	console.log('content: ', content);
+	const {title} = content;
 	return html`
-		<main class="app-element container">
-			main
-		</main>
+		<footer>
+			<h4 class="text-center">${title}</h4>
+		</footer>
 `}
